@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# Changing wallpaper
+# 1. Save the original wallpaper
+# 2. Download the GRIS wallpaper
+# 3. Change wallpaper to the downloaded one
+
 # Changing shell (sh in 2025 wtf?)
 chsh -s $(which bash)
 
 # Creating directory
-mkdir programas-ctf
-cd programas-ctf
+mkdir -p $HOME/bin/programas-ctf
+cd $HOME/bin/programas-ctf
 
 # Downloads
 pip3 install pycryptodome pwn sage
