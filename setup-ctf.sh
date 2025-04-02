@@ -5,7 +5,7 @@
 # 2. Download the GRIS wallpaper
 # 3. Change wallpaper to the downloaded one
 
-# Changing shell (sh in 2024 wtf?)
+# Changing shell (sh in 2025 wtf?)
 chsh -s $(which bash)
 
 # Creating directory
