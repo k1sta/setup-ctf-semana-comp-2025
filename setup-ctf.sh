@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Changing shell (sh in 2025 wtf?)
+chsh -s $(which bash)
+
 # Downloads
 pip3 install pycryptodome pwn sage
 wget "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3.1_build/ghidra_11.3.1_PUBLIC_20250219.zip" -O ghidra.zip
