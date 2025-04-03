@@ -24,9 +24,15 @@ unzip ghidra.zip
 tar -xvzf jdk-24.tar.gz
 tar -xvf pwndbg.tar.xz
 
+# Remove zips
+rm ghidra.zip jdk-24.tar.gz pwndbg.tar.xz
+
 # Adding variables and paths on env variables
-export PATH="$PATH:$(pwd ./ghidra_11.3.1_PUBLIC/ghidraRun):$(pwd ./pwndbg/bin/pwndbg)"
+export PATH="$PATH:$(realpath ./ghidra_11.3.1_PUBLIC/ghidraRun):$(realpath ./pwndbg/bin/pwndbg)"
 export JAVA_HOME="$(pwd jdk-24)/jdk-24"
+
+# Making the changes persistents
+echo -e "export PATH=$PATH\nexport JAVA_HOME=$JAVA_HOME" >> $HOME/.bashrc
 
 # Running apps that need UI configuration
 ./ghidra_11.3.1_PUBLIC/ghidraRun
